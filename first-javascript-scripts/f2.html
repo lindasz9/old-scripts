@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes shake{
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-10px); }
+            40% { transform: translateX(10px); }
+            60% { transform: translateX(-10px); }
+            80% { transform: translateX(10px); }
+            100% { transform: translateX(0); }
+            }
+        #grid_div{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 2px solid rgb(0, 0, 0);
+            border-right: 2px solid black;
+            height: 480px;
+            width: 480px;
+            margin: 0 auto;
+            
+        }
+        .cells{
+            display: flex;
+            border-top: 2px solid black;
+            border-left: 2px solid black;
+            justify-content: center;
+            align-items: center;
+            font-size: 28px;
+        }
+        .shake{
+            animation: shake 0.2s;
+        }
+    </style>
+    <title>f2</title>
+</head>
+<body>
+    <p><a href="index.html">Vissza</a></p>
+    <div id="grid_div"></div>
+    <p style="text-align: center; font-size: 24px" id="turns">Lépések: 0</p>
+    <button style="display: block; margin: auto" id="keveres">Keverés</button>
+    
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="f2.js"></script>
+</body>
+</html>

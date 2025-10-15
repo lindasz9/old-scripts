@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes scale{
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+        }
+        .scale{
+            animation: scale 0.2s ease;
+        }
+        @keyframes flash{
+            0%, 100% { background-color: white; }
+            25% { background-color: #ffecb3; }
+            50% { background-color: #a5f2c2; }
+            75% { background-color: #ffd1dc; }
+        }
+        .flash {
+            animation: flash 0.4s ease;
+        }
+        #cards_div{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            width: 80%;
+            margin: 0 auto;
+            gap: 10px;
+        }
+        .kartya{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            border: 2px solid black;
+            height: 100px;
+            background-color: rgb(255, 212, 159);
+        }
+    </style>
+    <title>f3</title>
+</head>
+<body>
+    <p><a href="index.html">Vissza</a></p>
+    <p>
+        <label for="parok_szama">Párok száma:</label>
+        <input id="parok_szama">
+        <button id="generalas">Generálás</button>
+    </p>
+    <div id="cards_div"></div>
+    <p id="szamlalo" style="text-align:center; font-size:20px">Megtalált párok: 0</p>
+
+    <script src="f3.js"></script>
+</body>
+</html>

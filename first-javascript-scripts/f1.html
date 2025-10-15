@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @keyframes scale{
+            from{
+                transform: scale(0.2);
+                opacity: 0;
+            }
+            to{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes slide{
+            from{
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes shake{
+            0% {transform: translateX(0)}
+            25% {transform: translateX(-5px)}
+            50% {transform: translateX(5px)}
+            75% {transform: translateX(-5px)}
+            100% {transform: translateX(0)}
+        }
+        .scale{
+            animation: scale 1s ease
+        }
+        .slide{
+            animation: slide 1s ease
+        }
+        .shake{
+            animation: shake 0.5s;
+        }
+        button:active{
+            color: white;
+        }
+        input:hover{
+            border-color: rgb(0, 115, 255);
+        }
+    </style>
+    <title>f1</title>
+</head>
+<body style="background-color: rgb(220, 253, 255);">
+    <p><a href="index.html">Vissza</a></p>
+    <h3 style="display:inline-block">A nevek:</h3>
+    <p style="display:inline-block"><input type="text" id="names"></p><br>
+    <button id="names_delete">Törlés</button>
+    <hr>
+
+    <div id="A_div">
+        <h2>A</h2>
+        <p>
+            <label for="people">Hány embert akarsz kisorsolni?</label>
+            <input id="people">  
+            <button id="sorsolas">Sorsolás</button>
+        </p>
+        <p id="A_hiba" style="color:red"></p>
+        <ul id="sorsolt_nevek"></ul>
+    </div>
+
+    <hr>
+
+    <h2>B</h2>
+    <button id="sorrend">Tetszőleges sorrend</button>
+    <ol id="sorban_nevek"></ol>
+    <hr>
+
+    <h2>C</h2>
+    <p>
+        <label for="fo">Hányas csoportokba szeretnél rendezni?</label>
+        <input id="fo">
+        <button id="rendezes">Rendezés</button>
+    </p>
+    <p id="C_hiba" style="color:red"></p>
+    <p id="loading"></p>
+    <table id="csoport_table" style="width: 80%"></table>
+    <script src="f1.js"></script>
+    <hr>
+</body>
+</html>
